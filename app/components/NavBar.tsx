@@ -1,8 +1,15 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import { TfiRocket } from "react-icons/tfi";
+import { usePathname } from "next/navigation";
+import classnames from "classnames";
+
 
 const NavBar = () => {
+
+    const currentPath = usePathname();
 
     const navLinks = [
         {label: "Dashboard", href: "/"},
@@ -17,7 +24,10 @@ const NavBar = () => {
       <ul className="flex gap-4 md:gap-12">
         {navLinks.map(link => (
             <li key={link.href}>
-                <Link className="text-zinc-500 hover:text-zinc-800 transition-colors" href={link.href}>{link.label}</Link>
+                <Link className={classnames({
+                    "text-zinc-500 hover:text-zinc-800 transition-colors": true,
+                    "text-zinc-800": link.href === currentPath,
+                })} href={link.href}>{link.label}</Link>
             </li>
         ))}
       </ul>
