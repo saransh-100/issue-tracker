@@ -24,6 +24,7 @@ const NavBar = () => {
       <ul className="flex gap-4 md:gap-12">
         {navLinks.map(link => (
             <li key={link.href}>
+                {/* <Link className = `text-zinc-500 hover:text-zinc-800 transition-colors ${link.href === currentPath ? "text-zinc-800" : ""}`> */}
                 <Link className={classnames({
                     "text-zinc-500 hover:text-zinc-800 transition-colors": true,
                     "text-zinc-800": link.href === currentPath,
