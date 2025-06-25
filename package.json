@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "npm run mongo & next dev",
     "mongo": "./scripts/start-mongo.sh",
     "build": "next build",
     "start": "next start",
