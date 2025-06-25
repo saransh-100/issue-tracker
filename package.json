@@ -4,12 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "mongo": "./scripts/start-mongo.sh",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "@prisma/client": "^6.10.1",
+    "@radix-ui/themes": "^3.2.1",
     "classnames": "^2.5.1",
     "next": "15.3.4",
     "prisma": "^6.10.1",
